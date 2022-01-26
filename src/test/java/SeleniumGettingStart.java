@@ -9,6 +9,9 @@ public class SeleniumGettingStart{
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		startup();
+		nextUrl();
+		backward();
+		forward();
 		close();
 	}
 	static void startup() {
@@ -18,6 +21,16 @@ public class SeleniumGettingStart{
 		driver.get("https://www.facebook.com");
 		driver.manage().window().maximize();
 		
+	}
+	static void nextUrl() {
+		
+		driver.get("https://www.google.com");
+	}
+	static void forward() {
+		driver.navigate().forward();
+	}
+	static void backward() {
+		driver.navigate().back();
 	}
 	static void close() {
 		//driver.quit();
